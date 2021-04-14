@@ -10,7 +10,7 @@ import { restaurantsRequest, restaurantsTransform } from "./restaurant.service";
 
 import { LocationContext } from "../location/location.context";
 
-export const RestaurantsContext = createContext();
+export let RestaurantsContext = createContext();
 
 export const RestaurantsContextProvider = ({ children }) => {
   const [restaurants, setRestaurants] = useState([]);

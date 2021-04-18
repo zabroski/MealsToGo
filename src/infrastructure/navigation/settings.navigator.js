@@ -2,6 +2,7 @@ import React from "react";
 import { SettingsScreen } from "../../features/settings/screens/settings.screen";
 // import { FavouritesScreen } from "../../features/settings/screens/favourites.screen";
 import { FavouritesScreen } from "../../features/settings/screens/favourite.screens";
+import { CameraScreen } from "../../features/settings/screens/camera.screen";
 
 import {
   createStackNavigator,
@@ -9,7 +10,6 @@ import {
 } from "@react-navigation/stack";
 
 const SettingsStack = createStackNavigator();
-
 export const SettingsNavigator = ({ route, navigation }) => {
   return (
     <SettingsStack.Navigator
@@ -26,6 +26,7 @@ export const SettingsNavigator = ({ route, navigation }) => {
         component={SettingsScreen}
       />
       <SettingsStack.Screen name="Favourites" component={FavouritesScreen} />
+      <SettingsStack.Screen name="Camera" component={CameraScreen} />
     </SettingsStack.Navigator>
   );
 };

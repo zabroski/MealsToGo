@@ -62,7 +62,7 @@ export const RestaurantsScreen = ({ navigation }) => {
             return (
               <TouchableOpacity
                 onPress={() =>
-                  navigation.navigate(" ", {
+                  navigation.navigate("RestaurantDetail", {
                     restaurant: item,
                   })
                 }

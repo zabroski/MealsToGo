@@ -4,7 +4,6 @@ import styled from "styled-components/native";
 
 import { LocationContext } from "../../../services/location/location.context";
 import { RestaurantsContext } from "../../../services/restaurants/restaurant.context";
-// import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
 
 import { Search } from "../components/search.component";
 import { MapCallout } from "../components/map-callout.component";
@@ -67,7 +66,7 @@ const RestaurantMap = ({ navigation }) => {
   );
 };
 
-export const MapScreen = () => {
+export const MapScreen = ({ navigation }) => {
   const { location } = useContext(LocationContext);
   if (!location) {
     return (
@@ -79,5 +78,5 @@ export const MapScreen = () => {
       />
     );
   }
-  return <RestaurantMap />;
+  return <RestaurantMap navigation={navigation} />;
 };
